@@ -1,6 +1,15 @@
 let infos = document.querySelector("section");
 
+
+document.getElementById("effacer").addEventListener("click", function() {
+  location.reload();
+});
+
+
+
+
 function search() {
+  
   let textContry = document.querySelector(".text").value;
   var capitalDiv = document.createElement("div");
   var flagDiv = document.createElement("div");
@@ -8,6 +17,7 @@ function search() {
   var continentDiv = document.createElement("div");
 
   capitalDiv.innerHTML = `<span>pays</span><br><p>${textContry}<p>`;
+
   let url = "https://restcountries.com/v3.1/name/" + textContry;
   fetch(url)
     .then(response =>
@@ -29,6 +39,6 @@ function search() {
        countryDiv.appendChild(flagDiv);
 
        infos.appendChild(countryDiv);
-
+       
     }))
 }

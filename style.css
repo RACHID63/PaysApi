@@ -30,6 +30,12 @@ img {
      box-shadow: 0 0 5px rgba(0,0,0,0.1);
     transition: 0.5s;
 }
+
+.box, .btns  {
+    display: flex;
+}
+
+
 .searchBar {
     display: flex;
     justify-content: space-between;
